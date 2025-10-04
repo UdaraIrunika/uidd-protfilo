@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UIDD Admin Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+  body { display:flex; min-height:100vh; background:#f5f7fa; color:#333; }
+
+  /* Sidebar */
+  .sidebar {
+    width:250px; background:#00C16E; color:#fff; display:flex; flex-direction:column; padding:20px;
+  }
+  .sidebar h2 { font-size:24px; margin-bottom:40px; text-align:center; }
+  .sidebar a {
+    display:flex; align-items:center; gap:15px; padding:12px 15px; margin-bottom:10px;
+    border-radius:8px; text-decoration:none; color:#fff; font-weight:600; transition:0.3s;
+  }
+  .sidebar a:hover { background:#009f57; }
+
+  /* Main content */
+  .main { flex:1; padding:20px; }
+  header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+  header h1 { font-size:24px; }
+  header button { padding:8px 15px; border:none; border-radius:5px; background:#00C16E; color:#fff; cursor:pointer; font-weight:600; transition:0.3s; }
+  header button:hover { background:#009f57; }
+
+  /* Cards */
+  .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; margin-bottom:30px; }
+  .card { background:#fff; border-radius:12px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.05); transition:0.3s; }
+  .card:hover { transform:translateY(-5px); }
+  .card h3 { margin-bottom:10px; font-size:18px; }
+  .card p { font-size:14px; color:#555; }
+
+  /* Table */
+  .table-container { overflow-x:auto; margin-bottom:30px; }
+  table { width:100%; border-collapse:collapse; min-width:700px; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.05); }
+  th, td { padding:12px 15px; text-align:left; }
+  th { background:#00C16E; color:#fff; font-weight:600; position:sticky; top:0; z-index:1; }
+  tr:nth-child(even) { background:#f5f7fa; }
+  tr:hover { background:#e0f4ea; }
+  td a { color:#00C16E; font-weight:600; text-decoration:none; transition:0.3s; }
+  td a:hover { text-decoration:underline; }
+
+  /* Search Box */
+  .search-box { margin-bottom:10px; }
+  .search-box input { width:100%; padding:10px 15px; border-radius:8px; border:1px solid #ccc; font-size:1rem; }
+
+  /* Settings form */
+  .settings { background:#fff; padding:20px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.05); }
+  .settings .input-group { margin-bottom:15px; }
+  .settings label { display:block; margin-bottom:5px; font-weight:600; }
+  .settings input, .settings select { width:100%; padding:10px; border-radius:8px; border:1px solid #ccc; }
+  .btn-save { padding:10px 20px; border:none; border-radius:8px; background:#00C16E; color:#fff; font-weight:600; cursor:pointer; transition:0.3s; }
+  .btn-save:hover { background:#009f57; }
+
+  /* Responsive */
+  @media(max-width:768px){
+    body{flex-direction:column;}
+    .sidebar{width:100%; flex-direction:row; overflow-x:auto;}
+    .sidebar a{flex:1 0 auto; text-align:center;}
+    .main{padding:10px;}
+  }
+
+  /* Active Section */
+  section{display:none;}
+  section.active{display:block;}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>UIDD Dashboard</h2>
+  <a href="#" data-section="dashboard"><i class="fas fa-home"></i> Dashboard</a>
+  <a href="#" data-section="messages"><i class="fas fa-envelope"></i> Messages</a>
+  <a href="#" data-section="settings"><i class="fas fa-cogs"></i> Settings</a>
+</div>
+
+<div class="main">
+  <header>
+    <h1>Welcome, UIDD</h1>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <!-- Dashboard Overview -->
+  <section id="dashboard" class="active">
+    <div class="cards">
+      <div class="card">
+        <h3>Total Messages</h3>
+        <p id="totalMessages">0</p>
+      </div>
+      <div class="card">
+        <h3>WhatsApp Messages</h3>
+        <p id="totalWhatsapp">0</p>
+      </div>
+      <div class="card">
+        <h3>Website Visits</h3>
+        <p>--</p>
+      </div>
+    </div>
+    <div class="search-box">
+      <input type="text" id="searchDashboard" placeholder="Search messages...">
+    </div>
+    <div class="table-container">
+      <table id="messagesTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>WhatsApp</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Messages Section -->
+  <section id="messages">
+    <h2>Incoming Messages</h2>
+    <div class="search-box">
+      <input type="text" id="searchMessages" placeholder="Search messages...">
+    </div>
+    <div class="table-container">
+      <table id="messagesTable2">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>WhatsApp</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Settings Section -->
+  <section id="settings">
+    <h2>Website Settings</h2>
+    <div class="settings">
+      <div class="input-group">
+        <label for="siteTitle">Website Title</label>
+        <input type="text" id="siteTitle" placeholder="Enter website title">
+      </div>
+      <div class="input-group">
+        <label for="heroText">Hero Text</label>
+        <input type="text" id="heroText" placeholder="Enter hero text">
+      </div>
+      <div class="input-group">
+        <label for="heroImg">Hero Image URL</label>
+        <input type="text" id="heroImg" placeholder="Enter hero image URL">
+      </div>
+      <div class="input-group">
+        <label for="siteFont">Font Family</label>
+        <select id="siteFont">
+          <option value="Inter, sans-serif">Inter</option>
+          <option value="Arial, sans-serif">Arial</option>
+          <option value="'Roboto', sans-serif">Roboto</option>
+          <option value="'Open Sans', sans-serif">Open Sans</option>
+        </select>
+      </div>
+      <button class="btn-save" id="saveSettings">Save Settings</button>
+    </div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  emailjs.init("wxDUx3lT39EZ5Robm"); // Replace with your EmailJS user ID
+
+  // Sidebar navigation
+  const sidebarLinks = document.querySelectorAll('.sidebar a');
+  const sections = document.querySelectorAll('section');
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(link.dataset.section).classList.add('active');
+    });
+  });
+
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    window.location.href = 'login.html';
+  });
+
+  // Messages storage
+  let messages = JSON.parse(localStorage.getItem('messages')) || [];
+
+  function renderTable(tbody, data) {
+    tbody.innerHTML = '';
+    data.forEach(msg => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${msg.name}</td>
+        <td>${msg.email}</td>
+        <td>${msg.subject || '-'}</td>
+        <td>${msg.message}</td>
+        <td><a href="${msg.whatsapp}" target="_blank"><i class="fab fa-whatsapp"></i></a></td>
+        <td>${msg.date || new Date().toLocaleString()}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  }
+
+  function renderMessages() {
+    renderTable(document.querySelector('#messagesTable tbody'), messages);
+    renderTable(document.querySelector('#messagesTable2 tbody'), messages);
+    document.getElementById('totalMessages').innerText = messages.length;
+    document.getElementById('totalWhatsapp').innerText = messages.filter(m => m.whatsapp).length;
+  }
+
+  renderMessages();
+
+  // Search filters
+  document.getElementById('searchDashboard').addEventListener('input', (e)=>{
+    const term = e.target.value.toLowerCase();
+    const filtered = messages.filter(m=> m.name.toLowerCase().includes(term) || m.email.toLowerCase().includes(term) || (m.subject && m.subject.toLowerCase().includes(term)));
+    renderTable(document.querySelector('#messagesTable tbody'), filtered);
+  });
+  document.getElementById('searchMessages').addEventListener('input', (e)=>{
+    const term = e.target.value.toLowerCase();
+    const filtered = messages.filter(m=> m.name.toLowerCase().includes(term) || m.email.toLowerCase().includes(term) || (m.subject && m.subject.toLowerCase().includes(term)));
+    renderTable(document.querySelector('#messagesTable2 tbody'), filtered);
+  });
+
+  // Settings
+  const siteTitleInput = document.getElementById('siteTitle');
+  const heroTextInput = document.getElementById('heroText');
+  const heroImgInput = document.getElementById('heroImg');
+  const siteFontSelect = document.getElementById('siteFont');
+
+  const settings = JSON.parse(localStorage.getItem('settings')) || {};
+  if(settings.siteTitle) siteTitleInput.value = settings.siteTitle;
+  if(settings.heroText) heroTextInput.value = settings.heroText;
+  if(settings.heroImg) heroImgInput.value = settings.heroImg;
+  if(settings.siteFont) siteFontSelect.value = settings.siteFont;
+
+  document.getElementById('saveSettings').addEventListener('click', ()=>{
+    const newSettings = {
+      siteTitle: siteTitleInput.value,
+      heroText: heroTextInput.value,
+      heroImg: heroImgInput.value,
+      siteFont: siteFontSelect.value
+    };
+    localStorage.setItem('settings', JSON.stringify(newSettings));
+    alert('Settings saved!');
+  });
+
+  function saveEmailMessage(msg){
+    messages.push({
+      name: msg.from_name,
+      email: msg.from_email,
+      subject: msg.subject,
+      message: msg.message,
+      whatsapp: msg.whatsapp || '',
+      date: new Date().toLocaleString()
+    });
+    localStorage.setItem('messages', JSON.stringify(messages));
+    renderMessages();
+  }
+
+
+</script>
+
+</body>
+</html>
