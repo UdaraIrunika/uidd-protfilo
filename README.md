@@ -54,7 +54,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Screenshots
 
-<img width="1919" height="957" alt="Screenshot 1" src="https://github.com/user-attachments/assets/4fa9b013-cab2-4e4f-ac87-3bcef04f423f" />  
-<img width="1055" height="958" alt="Screenshot 2" src="https://github.com/user-attachments/assets/f67a7ac9-27f3-48b7-a6f3-be6387f21550" />  
-<img width="974" height="951" alt="Screenshot 3" src="https://github.com/user-attachments/assets/8d788131-b94c-4f1e-aa6b-ec83e31c32fe" />  
-<img width="1039" height="950" alt="Screenshot 4" src="https://github.com/user-attachments/assets/476a714e-ffa6-4b31-86f9-eba38379171b" />
+<img width="317" height="650" alt="Screenshot 2025-10-05 112831" src="https://github.com/user-attachments/assets/c284805d-be17-4bb0-bd9e-781e7a62a571" />
+---
+<img width="322" height="755" alt="Screenshot 2025-10-05 112843" src="https://github.com/user-attachments/assets/d2be6481-d61e-4749-a140-75bfc20fa4bb" />
+---
+<img width="307" height="663" alt="Screenshot 2025-10-05 112852" src="https://github.com/user-attachments/assets/75505e8b-832f-4842-9732-bef3998d211c" />
