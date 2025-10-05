@@ -149,3 +149,56 @@ function typeWriter() {
 
 document.addEventListener("DOMContentLoaded", typeWriter);
 
+
+// Animate education cards on scroll
+const eduCards = document.querySelectorAll('.education-card');
+
+window.addEventListener('scroll', () => {
+  eduCards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      card.classList.add('show-card');
+    }
+  });
+});
+
+// Independent timeline toggle for multiple education cards
+document.addEventListener('DOMContentLoaded', function() {
+    const timelineButtons = document.querySelectorAll('.timeline-btn');
+    
+    timelineButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event bubbling
+            
+            const timelineContainer = this.closest('.education-card').querySelector('.timeline-container');
+            const icon = this.querySelector('i');
+            
+            // Close all other open timelines
+            document.querySelectorAll('.timeline-container').forEach(container => {
+                if (container !== timelineContainer && container.style.display === 'block') {
+                    container.style.display = 'none';
+                    container.classList.remove('show');
+                    const otherButton = container.closest('.education-card').querySelector('.timeline-btn');
+                    if (otherButton) {
+                        otherButton.classList.remove('active');
+                        const otherIcon = otherButton.querySelector('i');
+                        if (otherIcon) otherIcon.className = 'fas fa-chevron-down';
+                    }
+                }
+            });
+            
+            // Toggle current timeline
+            if (timelineContainer.style.display === 'none' || !timelineContainer.style.display) {
+                timelineContainer.style.display = 'block';
+                setTimeout(() => timelineContainer.classList.add('show'), 10);
+                this.classList.add('active');
+                icon.className = 'fas fa-chevron-up';
+            } else {
+                timelineContainer.style.display = 'none';
+                timelineContainer.classList.remove('show');
+                this.classList.remove('active');
+                icon.className = 'fas fa-chevron-down';
+            }
+        });
+    });
+});
