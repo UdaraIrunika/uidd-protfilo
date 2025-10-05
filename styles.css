@@ -660,6 +660,231 @@ footer {
     color: #000;
 }
 
+/* Education Section Updates */
+.education-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #f9fafb 0%, #eef3f7 100%);
+}
+
+.education-section .section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.education-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.education-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+}
+
+.education-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), #58a6ff);
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.education-card .edu-icon {
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover .edu-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, var(--primary-color), #58a6ff);
+}
+
+.edu-info h3 {
+    font-size: 1.4rem;
+    color: #111;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.edu-info p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.edu-info strong {
+    color: #222;
+    font-weight: 600;
+}
+
+/* Education Social Links within Cards */
+.edu-social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.edu-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.edu-social-links a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Additional Social Links Section */
+.education-social-section {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+}
+
+.education-social-section h3 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.education-social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: var(--light-color);
+    color: var(--dark-color);
+    border-radius: 8px;
+    transition: var(--transition);
+    text-decoration: none;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+
+.social-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+}
+
+.social-btn i {
+    font-size: 1.1rem;
+}
+
+/* Responsive Design for Education Section */
+@media (max-width: 768px) {
+    .education-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .education-card {
+        padding: 25px 20px;
+    }
+    
+    .education-section .section-title {
+        font-size: 2rem;
+    }
+    
+    .education-subtitle {
+        font-size: 1rem;
+    }
+    
+    .education-social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-btn {
+        width: 200px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-card {
+        text-align: center;
+    }
+    
+    .education-card .edu-icon {
+        margin: 0 auto 20px auto;
+    }
+    
+    .edu-social-links {
+        justify-content: center;
+    }
+    
+    .education-social-section {
+        padding: 30px 20px;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .footer-container {
@@ -675,3 +900,5 @@ footer {
         margin: 0 10px;
     }
 }
+
+
