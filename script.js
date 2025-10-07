@@ -202,3 +202,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+   // Add smooth scrolling for the CTA button
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctaButton = document.querySelector('.sponsors-cta .btn');
+        if (ctaButton) {
+            ctaButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+    });
