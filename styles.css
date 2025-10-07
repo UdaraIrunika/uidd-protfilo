@@ -29,6 +29,7 @@ body {
     color: var(--text-color);
     background-color: var(--white);
     overflow-x: hidden;
+    
 }
 
 .container {
@@ -260,8 +261,8 @@ nav {
 }
 
 .profile-img {
-    width: 350px;
-    height: 350px;
+    width: 850px;
+    height: 550px;
     max-width: 100%;
     object-fit: cover;
     border-radius: 50%;
@@ -1383,6 +1384,252 @@ footer {
     justify-content: space-between;
     font-size: 0.85rem;
     color: #666;
+}
+
+/* Progress Bar Styles */
+.topic-progress {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar-container.small {
+    height: 6px;
+    flex: 1;
+    background: #fffbeb;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-container.small .progress-bar {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+    min-width: 80px;
+}
+
+/* Timeline Item Styles */
+.timeline-content.completed {
+    background: #f0fdf4;
+    border-left: 3px solid #10b981;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.timeline-content.pending {
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.timeline-dot.completed {
+    background: #10b981;
+}
+
+.timeline-dot.pending {
+    background: #f59e0b;
+}
+
+/* Skills Grid Enhancement */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background: #e0e7ff;
+    color: #4f46e5;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: #4f46e5;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Certification Details Enhancement */
+.certification-details {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cert-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.cert-description {
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.topic-progress {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar-container.small {
+    height: 6px;
+    flex: 1;
+    background: #fffbeb;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-container.small .progress-bar {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+    min-width: 80px;
+}
+
+/* Timeline Item Styles */
+.timeline-content.completed {
+    background: #f0fdf4;
+    border-left: 3px solid #10b981;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.timeline-content.pending {
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.timeline-dot.completed {
+    background: #10b981;
+}
+
+.timeline-dot.pending {
+    background: #f59e0b;
+}
+
+/* Skills Grid Enhancement */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background: #e0e7ff;
+    color: #4f46e5;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: #4f46e5;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Certification Details Enhancement */
+.certification-details {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cert-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.cert-description {
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Progress Summary Enhancement */
+.progress-summary {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 1px solid #e2e8f0;
+}
+
+.progress-summary h4 {
+    margin-bottom: 10px;
+    color: #1e293b;
+    font-size: 1.1rem;
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+/* Timeline Section Headers */
+.timeline-section .section-title {
+    font-size: 1.2rem;
+    color: #374151;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topic-progress {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .progress-text {
+        min-width: auto;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
 }
 
 /* Education Cards */
