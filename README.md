@@ -111,58 +111,6 @@ The main files are `index.html`, `styles.css`, and `script.js` (all in the repos
 
 ---
 
-## Tech stack
-
-- **HTML5** — semantic markup. :contentReference[oaicite:11]{index=11}  
-- **CSS3** — variables, layout, responsive rules, animations. :contentReference[oaicite:12]{index=12}  
-- **JavaScript (ES6)** — interactivity scripts (typewriter, EmailJS, DOM listeners). :contentReference[oaicite:13]{index=13}  
-- **Font Awesome** used for icons (linked in `index.html`). :contentReference[oaicite:14]{index=14}  
-- **EmailJS** used for client-side email sending (configured inside `script.js`). :contentReference[oaicite:15]{index=15}
-
----
-
-## Installation & run locally
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/UdaraIrunika/uidd-protfilo.git
-   cd uidd-protfilo
-
-**Key things located in these files**
-
-- `index.html` — includes references to Font Awesome and TinyMCE and links the stylesheet + script; it contains the semantic sections: header, hero, sponsors, about, skills, education, projects/pricing, contact modal. See the HTML file for where each section starts. :contentReference[oaicite:8]{index=8}
-
-- `styles.css` — uses CSS custom properties (`:root` variables), responsive grid and flex layouts, hero styling, marquee styling for sponsors, and animations for skill bars and cards. :contentReference[oaicite:9]{index=9}
-
-- `script.js` — implements:
-  - Mobile hamburger toggle & sticky header
-  - Smooth anchor scroll
-  - Back-to-top button
-  - Typewriter effect — controlled by a `titles` array (edit to change shown roles)
-  - Animated skill bars on scroll
-  - Education-card expand/collapse timeline logic
-  - Modal open/close and form submission
-  - EmailJS initialization and `send` logic (service & template IDs + public key are present in the script — **replace with your own** for production). :contentReference[oaicite:10]{index=10}
-
----
-
-## Tech stack
-
-- **HTML5** — semantic markup. :contentReference[oaicite:11]{index=11}  
-- **CSS3** — variables, layout, responsive rules, animations. :contentReference[oaicite:12]{index=12}  
-- **JavaScript (ES6)** — interactivity scripts (typewriter, EmailJS, DOM listeners). :contentReference[oaicite:13]{index=13}  
-- **Font Awesome** used for icons (linked in `index.html`). :contentReference[oaicite:14]{index=14}  
-- **EmailJS** used for client-side email sending (configured inside `script.js`). :contentReference[oaicite:15]{index=15}
-
----
-
-## Installation & run locally
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/UdaraIrunika/uidd-protfilo.git
-   cd uidd-protfilo
-
 2.Quick preview:
 
    Option A — open the file directly:
