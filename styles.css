@@ -1656,9 +1656,9 @@ nav {
 
 .category-btn {
     padding: 12px 30px;
-    border: 2px solid #6c63ff;
+    border: 2px solid #3498db;
     background: transparent;
-    color: #6c63ff;
+    color: #3498db;
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
@@ -1667,7 +1667,7 @@ nav {
 
 .category-btn.active,
 .category-btn:hover {
-    background: #6c63ff;
+    background: #3498db;
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
@@ -1722,7 +1722,7 @@ nav {
 }
 
 .package-card.popular {
-    border: 2px solid #6c63ff;
+    border: 2px solid #3498db;
     transform: scale(1.05);
 }
 
@@ -1735,7 +1735,7 @@ nav {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: #6c63ff;
+    background: #3498db;
     color: white;
     padding: 6px 20px;
     border-radius: 20px;
@@ -1759,7 +1759,7 @@ nav {
 .package-price {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #6c63ff;
+    color: #3498db;
 }
 
 .package-description {
@@ -1798,7 +1798,7 @@ nav {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #6c63ff;
+    color: #3498db;
     font-weight: bold;
 }
 
@@ -1818,7 +1818,7 @@ nav {
     padding: 40px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 2px dashed #6c63ff;
+    border: 2px dashed #3498db;
 }
 
 .cta-content h3 {
@@ -1931,5 +1931,88 @@ nav {
     
     .package-price {
         font-size: 1.5rem;
+    }
+}
+
+/* Additional Services Styles */
+.additional-services {
+    margin-top: 60px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.services-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2a2a2a;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.service-item {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #3498db;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.service-item h5 {
+    color: #2a2a2a;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.service-item p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.service-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.service-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design for Services */
+@media (max-width: 768px) {
+    .additional-services {
+        padding: 25px;
+        margin-top: 40px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-item {
+        padding: 20px;
     }
 }
