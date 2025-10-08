@@ -368,3 +368,23 @@ document.getElementById('packageContactForm').addEventListener('submit', functio
             submitBtn.disabled = false;
         });
 });
+
+// Update the openContactForm function to handle new services
+function openContactForm(serviceName) {
+    document.getElementById('packageName').textContent = serviceName;
+    document.getElementById('contactModal').style.display = 'block';
+}
+
+// Add this to your existing JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click listeners to all service buttons
+    const serviceButtons = document.querySelectorAll('.service-btn');
+    serviceButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const serviceName = this.textContent === 'Inquire' 
+                ? this.closest('.service-item').querySelector('h5').textContent
+                : this.textContent;
+            openContactForm(serviceName);
+        });
+    });
+});
