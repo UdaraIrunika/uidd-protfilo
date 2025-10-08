@@ -216,3 +216,155 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+
+    // Package Category Navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const packageCategories = document.querySelectorAll('.package-category');
+    
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            
+            // Update active button
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Show selected category
+            packageCategories.forEach(cat => {
+                cat.classList.remove('active');
+                if (cat.id === category) {
+                    cat.classList.add('active');
+                }
+            });
+        });
+    });
+});
+
+// Contact Modal Functionality
+function openContactForm(packageName) {
+    document.getElementById('packageName').textContent = packageName;
+    document.getElementById('contactModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('contactModal').style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('contactModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+// Close modal with escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+// Package Category Navigation
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS with your public key
+    emailjs.init("wxDUx3lT39EZ5Robm"); // Replace with your EmailJS public key
+    
+    // Category switching
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const packageCategories = document.querySelectorAll('.package-category');
+    
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.getAttribute('data-category');
+            
+            // Update active button
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Show selected category
+            packageCategories.forEach(cat => {
+                cat.classList.remove('active');
+                if (cat.id === category) {
+                    cat.classList.add('active');
+                }
+            });
+        });
+    });
+});
+
+// Modal Functions
+function openContactForm(packageName) {
+    document.getElementById('packageName').textContent = packageName;
+    document.getElementById('contactModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('contactModal').style.display = 'none';
+    document.getElementById('packageContactForm').reset();
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('contactModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+// Form Submission with EmailJS
+document.getElementById('packageContactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const packageName = document.getElementById('packageName').textContent;
+    const formData = new FormData(this);
+    const submitBtn = this.querySelector('button[type="submit"]');
+    
+    // Show loading state
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    // Prepare email data
+    const emailData = {
+        package_name: packageName,
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        message: formData.get('message'),
+        budget: formData.get('budget'),
+        timestamp: new Date().toLocaleString(),
+        to_email: 'uiindustryprivetlimited@gmail.com'
+    };
+    
+    // Send email to yourself (admin notification)
+    emailjs.send('service_bn85zae', 'template_honbbgg', emailData)
+        .then(function(response) {
+            console.log('Admin email sent successfully:', response);
+            
+            // Send auto-reply to client
+            return emailjs.send('service_bn85zae', 'template_honbbgg', {
+                to_email: emailData.email,
+                name: emailData.name,
+                package_name: emailData.package_name,
+                budget: emailData.budget,
+                timestamp: emailData.timestamp
+            });
+        })
+        .then(function(response) {
+            console.log('Auto-reply sent successfully:', response);
+            alert(`✅ Thank you for your interest in the ${packageName}! We have received your inquiry and will contact you soon.`);
+            closeModal();
+            document.getElementById('packageContactForm').reset();
+        })
+        .catch(function(error) {
+            console.error('EmailJS Error:', error);
+            alert('❌ Sorry, there was an error sending your message. Please try again or contact us directly at uiindustryprivetlimited@gmail.com');
+        })
+        .finally(function() {
+            // Reset button state
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
+});
