@@ -21,6 +21,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li> <!-- Added this line -->
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -2346,7 +2347,7 @@ fetchRepos();
         <section id="pricing" class="pricing-section">
             <div class="container">
                 <h2 class="section-title">Service Packages</h2>
-                <p class="section-subtitle">Professional solutions tailored to your needs and budget</p>
+                <p class="section-subtitle" align="center">Professional solutions tailored to your needs and budget</p>
 
                 <!-- Package Category Navigation -->
                 <div class="package-categories">
@@ -2357,14 +2358,14 @@ fetchRepos();
 
                 <!-- Graphic Design Packages -->
                 <div class="package-category active" id="graphic-design">
-                    <h3 class="category-title">🎨 Graphic Design Packages</h3>
-                    <p class="category-description">Professional visual identity and branding solutions</p>
+                    <h3 class="category-title">🎨 Graphic Design & Advertising Packages</h3>
+                    <p class="category-description">Complete visual identity, branding, and advertising solutions</p>
                     
                     <div class="packages-grid">
                         <!-- Basic Design Package -->
                         <div class="package-card">
                             <div class="package-header">
-                                <h4>Basic Design</h4>
+                                <h4>Starter Design</h4>
                                 <div class="package-price">LKR 5,000 – 8,000</div>
                             </div>
                             <div class="package-description">
@@ -2377,10 +2378,12 @@ fetchRepos();
                                     <li>1 Banner or Poster Design</li>
                                     <li>Brand Color Palette</li>
                                     <li>Font Style Guide</li>
+                                    <li>1 Social Media Post Design</li>
+                                    <li>Basic Profile Picture (DP)</li>
                                 </ul>
                             </div>
                             <div class="package-cta">
-                                <button class="btn primary package-btn" onclick="openContactForm('Basic Design Package')">Get Started</button>
+                                <button class="btn primary package-btn" onclick="openContactForm('Starter Design Package')">Get Started</button>
                             </div>
                         </div>
 
@@ -2388,35 +2391,39 @@ fetchRepos();
                         <div class="package-card popular">
                             <div class="popular-badge">Most Popular</div>
                             <div class="package-header">
-                                <h4>Standard Branding</h4>
+                                <h4>Professional Branding</h4>
                                 <div class="package-price">LKR 10,000 – 15,000</div>
                             </div>
                             <div class="package-description">
-                                <p>Comprehensive branding solution for small businesses and growing companies</p>
+                                <p>Comprehensive branding and advertising solution for small businesses</p>
                             </div>
                             <div class="package-features">
                                 <h5>📦 Deliverables:</h5>
                                 <ul>
                                     <li>Complete Logo Pack (Multiple variations)</li>
-                                    <li>3 Social Media Templates</li>
-                                    <li>2 Professional Poster Designs</li>
+                                    <li>5 Social Media Templates (FB/Instagram)</li>
+                                    <li>3 Professional Poster Designs</li>
                                     <li>Business Card Design</li>
                                     <li>Brand Style Guide</li>
+                                    <li>2 Advertising Banners</li>
+                                    <li>Social Media Cover Photo</li>
+                                    <li>Professional Profile Picture</li>
+                                    <li>1 Simple Advertisement Video (15-30 sec)</li>
                                 </ul>
                             </div>
                             <div class="package-cta">
-                                <button class="btn primary package-btn" onclick="openContactForm('Standard Branding Package')">Get Started</button>
+                                <button class="btn primary package-btn" onclick="openContactForm('Professional Branding Package')">Get Started</button>
                             </div>
                         </div>
 
                         <!-- Premium Brand Identity Package -->
                         <div class="package-card">
                             <div class="package-header">
-                                <h4>Premium Brand Identity</h4>
+                                <h4>Premium Advertising Suite</h4>
                                 <div class="package-price">LKR 18,000 – 25,000</div>
                             </div>
                             <div class="package-description">
-                                <p>Complete brand identity system for professional brands and established businesses</p>
+                                <p>Complete brand identity and advertising system for established businesses</p>
                             </div>
                             <div class="package-features">
                                 <h5>📦 Deliverables:</h5>
@@ -2425,14 +2432,59 @@ fetchRepos();
                                     <li>Typography System</li>
                                     <li>Complete Color Palette</li>
                                     <li>Brand Patterns & Elements</li>
-                                    <li>5 Social Media Templates</li>
-                                    <li>3 Professional Posters</li>
+                                    <!-- <li>8 Social Media Templates</li> -->
+                                    <li>5 Professional Posters</li>
                                     <li>Brochure or Flyer Design</li>
                                     <li>Comprehensive Brand Guidelines</li>
+                                    <li>4 Advertising Banners (Different sizes)</li>
+                                    <!-- <li>Social Media Kit (DP + Cover + Highlights)</li> -->
+                                    <li>2 Professional Advertisement Videos (30-60 sec)</li>
+                                    <li>Brand Regeneration (Update existing assets)</li>
+                                    <li>Facebook Ad Creatives (3 designs)</li>
+                                    <li>Instagram Story Templates (5 designs)</li>
+                                    <li>Email Newsletter Template</li>
                                 </ul>
                             </div>
                             <div class="package-cta">
-                                <button class="btn primary package-btn" onclick="openContactForm('Premium Brand Identity Package')">Get Started</button>
+                                <button class="btn primary package-btn" onclick="openContactForm('Premium Advertising Suite Package')">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Services Section -->
+                    <div class="additional-services">
+                        <h4 class="services-title">🎯 Additional Advertising Services</h4>
+                        <div class="services-grid">
+                            <div class="service-item">
+                                <div class="service-icon">🎥</div>
+                                <h5>Advertisement Videos</h5>
+                                <p>Professional product promo videos, social media ads, and explainer videos</p>
+                                <div class="service-price">From LKR 3,000</div>
+                                <button class="btn secondary service-btn" onclick="openContactForm('Advertisement Video Service')">Inquire</button>
+                            </div>
+                            
+                            <div class="service-item">
+                                <div class="service-icon">📱</div>
+                                <h5>Social Media Kit</h5>
+                                <p>Complete social media branding including DP, cover, story templates</p>
+                                <div class="service-price">From LKR 2,500</div>
+                                <button class="btn secondary service-btn" onclick="openContactForm('Social Media Kit Service')">Inquire</button>
+                            </div>
+                            
+                            <div class="service-item">
+                                <div class="service-icon">🔄</div>
+                                <h5>Brand Regeneration</h5>
+                                <p>Modernize and refresh your existing brand identity and assets</p>
+                                <div class="service-price">From LKR 4,000</div>
+                                <button class="btn secondary service-btn" onclick="openContactForm('Brand Regeneration Service')">Inquire</button>
+                            </div>
+                            
+                            <div class="service-item">
+                                <div class="service-icon">📢</div>
+                                <h5>Facebook Ads Package</h5>
+                                <p>Complete set of Facebook advertising creatives and banners</p>
+                                <div class="service-price">From LKR 3,500</div>
+                                <button class="btn secondary service-btn" onclick="openContactForm('Facebook Ads Package')">Inquire</button>
                             </div>
                         </div>
                     </div>
@@ -2475,7 +2527,7 @@ fetchRepos();
                             <div class="popular-badge">Most Popular</div>
                             <div class="package-header">
                                 <h4>Business Website</h4>
-                                <div class="package-price">LKR 40,000 – 70,000</div>
+                                <div class="package-price">LKR 50,000 – 80,000</div>
                             </div>
                             <div class="package-description">
                                 <p>Professional website solution for growing companies and organizations</p>
@@ -2511,7 +2563,8 @@ fetchRepos();
                                 <h5>🚀 Features:</h5>
                                 <ul>
                                     <li>Dynamic System (PHP/MySQL)</li>
-                                    <li>Payment Gateway Integration</li>
+                                    <!-- <li>Payment Gateway Integration</li> -->
+                                    <li>Payment Integration (COD OR BankPayment)</li>
                                     <li>Advanced Admin Dashboard</li>
                                     <li>Product Management System</li>
                                     <li>User Account System</li>
@@ -2617,7 +2670,7 @@ fetchRepos();
                         </div>
                     </div>
                 </div>
-
+<br>
                 <!-- Custom Solution CTA -->
                 <div class="custom-solution-cta">
                     <div class="cta-content">
@@ -2666,7 +2719,7 @@ fetchRepos();
         <div class="contact-content">
             <div class="contact-info">
                 <h3>Contact Information</h3>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:uidd_7plprivetlimited@gmail.com">uidd_7plprivetlimited@gmail.com</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:uiindustryprivetlimited@gmail.com">uiindustryprivetlimited@gmail.com</a></p>
                 <p><i class="fas fa-phone"></i> <a href="tel:+94764353012">+94 76 4353 012</a></p>
                 <p><i class="fas fa-map-marker-alt"></i> Galewela, Sri Lanka</p>
                 <div class="contact-social">
@@ -2740,29 +2793,33 @@ fetchRepos();
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
+                <center>
                 <h2>UIDD</h2>
                 <p>Creative Designer | Web Developer | Cybersecurity Enthusiast</p>
+                </center>
             </div>
             <div class="footer-links">
+                <center>
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#home">Home</a> / <a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a> / <a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                </center>
             </div>
             <div class="footer-social">
+                <center>
                 <h3>Follow Me</h3>
                 <div class="social-icons">
                     <a href="https://github.com/UdaraIrunika" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/udara-irunika-770bb934a/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://www.instagram.com/d.udarairunikade?igsh=MTI5ZXhrbHQ1OHhscw==" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://x.com/DamuniZoys48998?t=fG8v9JEWmSJsqhFA0_vqCA&s=09" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://x.com/DamuniZoys48998?t=fG8v9JEWmSJsqhFA0_vqCA&s=09" target="_blank"><i class="fab fa-x"></i></a>
                     <a href="https://www.facebook.com/share/1LbKmz47pH/" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="https://www.tiktok.com/@uidd_7pl?_t=ZS-90EgtakyOpD&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
+                </center>
             </div>
         </div>
         <div class="footer-bottom">
