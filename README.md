@@ -234,15 +234,32 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 💼 **Interested in working together?** Feel free to reach out for collaborations, projects, or just a friendly chat about technology!
 
-### Screenshots:
-<img width="1272" height="960" alt="Screenshot 2025-10-08 113641" src="https://github.com/user-attachments/assets/7e8ea809-c730-4fc3-b69e-eff5870dbc7a" /> ---
-<img width="429" height="728" alt="Screenshot 2025-10-08 113802" src="https://github.com/user-attachments/assets/56b4692b-0ef4-4f61-8840-94e65e2e7641" /> --- 
-<img width="448" height="698" alt="Screenshot 2025-10-08 113814" src="https://github.com/user-attachments/assets/d1adb014-5b56-41a3-bf51-badcab5705f9" /> --- 
-<img width="447" height="800" alt="Screenshot 2025-10-08 113828" src="https://github.com/user-attachments/assets/a32a2230-a06c-4422-993d-4e863362da21" /> ---
-<img width="415" height="579" alt="Screenshot 2025-10-08 113844" src="https://github.com/user-attachments/assets/44422d7c-5cee-41b8-8a06-d50821d2ea47" /> ---
-<img width="427" height="638" alt="Screenshot 2025-10-08 113856" src="https://github.com/user-attachments/assets/20a15590-39a0-4320-995c-6e352cc465cf" /> ---
-<img width="432" height="927" alt="Screenshot 2025-10-08 113907" src="https://github.com/user-attachments/assets/0e53b774-904e-4069-bbcb-5a57ff805bb6" /> ---
-<img width="1112" height="960" alt="Screenshot 2025-10-08 113917" src="https://github.com/user-attachments/assets/ba889065-ff5e-4bdc-b68e-10f298d8ef3a" /> ---
+### Project Screenshots
+
+#### 1. Main Dashboard / Overview
+<img width="1272" height="960" src="https://github.com/user-attachments/assets/7e8ea809-c730-4fc3-b69e-eff5870dbc7a" alt="Screenshot 1" />
+
+#### 2. Summary / Full-screen View
+<img width="1112" height="960" src="https://github.com/user-attachments/assets/ba889065-ff5e-4bdc-b68e-10f298d8ef3a" alt="Screenshot 8" />
+
+#### 3. Feature / Sidebar
+<img width="429" height="728" src="https://github.com/user-attachments/assets/56b4692b-0ef4-4f61-8840-94e65e2e7641" alt="Screenshot 2" />
+
+#### 4. Feature / Detail Screen
+<img width="448" height="698" src="https://github.com/user-attachments/assets/d1adb014-5b56-41a3-bf51-badcab5705f9" alt="Screenshot 3" />
+
+#### 5. Feature / Detail Screen
+<img width="447" height="800" src="https://github.com/user-attachments/assets/a32a2230-a06c-4422-993d-4e863362da21" alt="Screenshot 4" />
+
+#### 6. Modal / Pop-up
+<img width="415" height="579" src="https://github.com/user-attachments/assets/44422d7c-5cee-41b8-8a06-d50821d2ea47" alt="Screenshot 5" />
+
+#### 7. Modal / Info Card
+<img width="427" height="638" src="https://github.com/user-attachments/assets/20a15590-39a0-4320-995c-6e352cc465cf" alt="Screenshot 6" />
+
+#### 8. Scrollable Section / Long View
+<img width="432" height="927" src="https://github.com/user-attachments/assets/0e53b774-904e-4069-bbcb-5a57ff805bb6" alt="Screenshot 7" />
+
 
 
 
