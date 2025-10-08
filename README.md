@@ -239,16 +239,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 #### 1. Main Dashboard / Overview
 <img width="1272" height="960" src="https://github.com/user-attachments/assets/7e8ea809-c730-4fc3-b69e-eff5870dbc7a" alt="Screenshot 1" />
 
-#### 2. Summary / Full-screen View
-<img width="1112" height="960" src="https://github.com/user-attachments/assets/ba889065-ff5e-4bdc-b68e-10f298d8ef3a" alt="Screenshot 8" />
-
-#### 3. Feature / Sidebar
+#### 2. Education Parner / Sidebar
 <img width="429" height="728" src="https://github.com/user-attachments/assets/56b4692b-0ef4-4f61-8840-94e65e2e7641" alt="Screenshot 2" />
 
-#### 4. Feature / Detail Screen
+#### 3. Feature / Detail Screen
 <img width="448" height="698" src="https://github.com/user-attachments/assets/d1adb014-5b56-41a3-bf51-badcab5705f9" alt="Screenshot 3" />
 
-#### 5. Feature / Detail Screen
+#### 4. Feature / Detail Screen
 <img width="447" height="800" src="https://github.com/user-attachments/assets/a32a2230-a06c-4422-993d-4e863362da21" alt="Screenshot 4" />
 
 #### 6. Modal / Pop-up
@@ -260,6 +257,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 #### 8. Scrollable Section / Long View
 <img width="432" height="927" src="https://github.com/user-attachments/assets/0e53b774-904e-4069-bbcb-5a57ff805bb6" alt="Screenshot 7" />
 
+#### 9. Contact Us / Full-screen View
+<img width="1112" height="960" src="https://github.com/user-attachments/assets/ba889065-ff5e-4bdc-b68e-10f298d8ef3a" alt="Screenshot 8" />
 
 
 
